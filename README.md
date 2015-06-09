@@ -8,6 +8,8 @@ import numpy as np
 import cross_product as cp
 
 v = np.eye(3, dtype=np.float32)
-
 np.testing.assert_array_almost_equal(cp.cross(v[0], v[1]), v[2])
+
+v = np.eye(4, dtype=np.float32)
+np.testing.assert_array_almost_equal(cp.cross(v[0], v[1], v[2]), v[3])
 ```
